@@ -102,6 +102,7 @@ const errorHandler = (error, req, res, next) => {
     response.stack = error.stack;
   }
 
+  
   return res.status(statusCode).json(response);
 };
 

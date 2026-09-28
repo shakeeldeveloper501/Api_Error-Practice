@@ -10,6 +10,7 @@ const registerUsers_simple = async (req, res) => {
         await User.create({ email, password })
         return res.status(202).json({ message: "User created" })
     }
+    // If error will add ref
     catch (error) {
         return res.status(410).json({ error })
     }
